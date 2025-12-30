@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export function Footer() {
   return (
-    <footer className="bg-slate-900 text-white py-16 border-t border-white/5">
-      <div className="container mx-auto px-20 md:px-24">
+    <footer className="bg-[#0b3654] text-white py-16 border-t border-white/5">
+      <div className="container mx-auto px-4 sm:px-6 md:px-20 lg:px-24">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Section */}
           <div className="space-y-6">
@@ -31,7 +31,7 @@ export function Footer() {
               <li>
                 <a
                   href="#courses"
-                  className="hover:text-[#ffc90d] transition-colors"
+                  className="hover:text-[#009FC8] transition-colors"
                 >
                   Featured Courses
                 </a>
@@ -39,7 +39,7 @@ export function Footer() {
               <li>
                 <a
                   href="#about"
-                  className="hover:text-[#ffc90d] transition-colors"
+                  className="hover:text-[#009FC8] transition-colors"
                 >
                   About Us
                 </a>
@@ -47,7 +47,7 @@ export function Footer() {
               <li>
                 <a
                   href="#testimonials"
-                  className="hover:text-[#ffc90d] transition-colors"
+                  className="hover:text-[#009FC8] transition-colors"
                 >
                   Testimonials
                 </a>
@@ -55,7 +55,7 @@ export function Footer() {
               <li>
                 <a
                   href="#faq"
-                  className="hover:text-[#ffc90d] transition-colors"
+                  className="hover:text-[#009FC8] transition-colors"
                 >
                   Common Questions
                 </a>
@@ -68,22 +68,22 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6 text-white">Our Programs</h4>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="#" className="hover:text-[#ffc90d] transition-colors">
+                <a href="#" className="hover:text-[#009FC8] transition-colors">
                   Noorani Qaida
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#ffc90d] transition-colors">
+                <a href="#" className="hover:text-[#009FC8] transition-colors">
                   Quran Reading
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#ffc90d] transition-colors">
+                <a href="#" className="hover:text-[#009FC8] transition-colors">
                   Tajweed Mastery
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-[#ffc90d] transition-colors">
+                <a href="#" className="hover:text-[#009FC8] transition-colors">
                   Hifz Program
                 </a>
               </li>
@@ -95,18 +95,18 @@ export function Footer() {
             <h4 className="font-bold text-lg mb-6 text-white">Contact Us</h4>
             <ul className="space-y-4 text-gray-400">
               <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-[#ffc90d]" />
+                <Phone className="w-5 h-5 text-[#009FC8]" />
                 <div className="flex flex-col">
                   <span>0305-2087083</span>
                   <span>0312-5545581</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-[#ffc90d]" />
+                <Mail className="w-5 h-5 text-[#009FC8]" />
                 <span className="break-all">info@alquranclassesonline.com</span>
               </li>
               <li className="flex items-center gap-3">
-                <Globe className="w-5 h-5 text-[#ffc90d]" />
+                <Globe className="w-5 h-5 text-[#009FC8]" />
                 <span>Available 24/7 Online</span>
               </li>
             </ul>

@@ -50,7 +50,7 @@ export default function FeaturedCourses() {
   ];
 
   return (
-    <section className="py-20 px-4 bg-[#fcfbf7] relative overflow-hidden font-serif">
+    <section className="py-20 px-4 sm:px-6 bg-[#fcfbf7] relative overflow-hidden">
       {/* Background Islamic Mandala Patterns */}
       <div className="absolute top-0 left-0 w-80 h-80 opacity-[0.07] pointer-events-none -translate-x-1/4 -translate-y-1/4">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -123,14 +123,14 @@ export default function FeaturedCourses() {
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Yellow Badge */}
         <div className="text-center mb-6">
-          <span className="bg-[#ffc107] text-white px-5 py-1.5 rounded shadow-sm font-bold text-xs tracking-widest uppercase">
+          <span className="inline-block bg-yellow-400 px-4 py-1 rounded-md text-black font-semibold text-sm">
             FEATURED COURSES
           </span>
         </div>
 
         {/* Main Heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#1a1a1a] mb-6 tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-5xl font-bold  mb-6 tracking-tight leading-tight">
             Online Quran Courses for Kids and Adults
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed text-lg font-sans">
@@ -141,7 +141,7 @@ export default function FeaturedCourses() {
         </div>
 
         {/* Carousel */}
-        <div className="mt-12 px-10">
+        <div className="mt-12 px-2 sm:px-4 md:px-6 lg:px-10">
           <Carousel
             plugins={[plugin.current]}
             opts={{
@@ -150,13 +150,13 @@ export default function FeaturedCourses() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4">
               {courses.map((course, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5"
+                  className="pl-2 sm:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4 2xl:basis-1/5"
                 >
-                  <div className="relative group h-full transition-transform duration-300 hover:-translate-y-2 py-4">
+                  <div className="relative group h-full transition-transform duration-300 hover:-translate-y-2 active:-translate-y-2 py-4">
                     {/* Dome Card Shape */}
                     <div
                       className="bg-[#fff9e5] relative pt-12 pb-8 px-6 flex flex-col items-center h-full shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-[#fef3c7] w-full max-w-[280px] mx-auto"
@@ -237,8 +237,8 @@ export default function FeaturedCourses() {
             </CarouselContent>
 
             {/* Navigation */}
-            <CarouselPrevious className="hidden md:flex -left-4 bg-white border-[#ffc107] text-[#ffc107] hover:bg-[#ffc107] hover:text-white" />
-            <CarouselNext className="hidden md:flex -right-4 bg-white border-[#ffc107] text-[#ffc107] hover:bg-[#ffc107] hover:text-white" />
+            <CarouselPrevious className="hidden md:flex -left-2 lg:-left-4 bg-white border-[#ffc107] text-[#ffc107] hover:bg-[#ffc107] hover:text-white" />
+            <CarouselNext className="hidden md:flex -right-2 lg:-right-4 bg-white border-[#ffc107] text-[#ffc107] hover:bg-[#ffc107] hover:text-white" />
           </Carousel>
         </div>
       </div>
