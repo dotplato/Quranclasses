@@ -22,7 +22,7 @@ export function Section2() {
                   className="w-full h-full object-cover"
                 />
                 {/* Badge overlay */}
-                <div className="absolute top-4 right-4 bg-gradient-to-r from-[#ffc90d] to-[#ff9d00] text-black px-3 py-1 rounded-full text-xs font-semibold">
+                <div className="absolute top-4 right-4 bg-gradient-to-r from-[#1AC5E8] to-[#009FC8] text-white px-3 py-1 rounded-full text-xs font-semibold">
                   Certified
                 </div>
               </div>
@@ -53,7 +53,7 @@ export function Section2() {
             {/* Student Count - Bottom Left with Animation */}
             <div className="absolute bottom-4 left-4 bg-white rounded-lg shadow-xl p-4 flex items-center gap-3">
               <div className="student-icon-wrapper">
-                <div className="bg-gradient-to-r from-[#1ab69d] to-[#36c2e2] p-3 rounded-full student-icon-container">
+                <div className="gradient-gold p-3 rounded-full student-icon-container">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
               </div>
@@ -68,13 +68,13 @@ export function Section2() {
           <div className="space-y-6">
             {/* Yellow Badge */}
             <div className="inline-block">
-              <span className="bg-gradient-to-r from-[#ffc90d] to-[#ff9d00] text-black px-4 py-2 rounded-md font-semibold text-sm">
+              <span className="inline-block bg-yellow-400 px-4 py-1 rounded-md text-black font-semibold text-sm">
                 SALIENT FEATURES
               </span>
             </div>
 
             {/* Heading */}
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 ">
               A Unique Package of Modern & Religious Education
             </h1>
 
@@ -89,7 +89,7 @@ export function Section2() {
               ].map((feature, idx) => (
                 <div key={idx} className="flex items-start gap-4 group">
                   <div className="shrink-0 mt-1">
-                    <div className="w-6 h-6 rounded-full bg-gradient-to-r from-[#1ab69d] to-[#36c2e2] flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <div className="w-6 h-6 rounded-full bg-[#0D5F2B] flex items-center justify-center group-hover:scale-110 transition-transform">
                       <svg
                         width="14"
                         height="14"
@@ -115,16 +115,16 @@ export function Section2() {
             {/* Two Buttons with Animation */}
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               {/* Register Now Button */}
-              <div className="animated-button-wrapper">
-                <button className="animated-button gradient-gold text-black font-semibold px-8 py-3 rounded-md relative">
+              <div className="animated-button-wrapper w-full sm:w-auto">
+                <button className="animated-button cursor-pointer gradient-gold text-white font-semibold px-8 py-3 rounded-md relative w-full sm:w-auto">
                   <span className="relative z-10">REGISTER NOW</span>
                 </button>
               </div>
 
               {/* WhatsApp Button */}
-              <div className="animated-button-wrapper-white">
-                <button className="animated-button bg-white text-gray-900 font-semibold px-8 py-3 rounded-md relative border-2 border-gray-300 hover:border-[#ffc90d] transition-colors">
-                  <span className="relative z-10 flex items-center gap-2">
+              <div className="animated-button-wrapper-white w-full sm:w-auto">
+                <button className="animated-button cursor-pointer bg-white text-gray-900 font-semibold px-8 py-3 rounded-md relative border-2 border-gray-300 hover:border-[#009FC8] transition-colors w-full sm:w-auto">
+                  <span className="relative z-10 flex items-center justify-center gap-2">
                     <svg
                       className="w-5 h-5"
                       fill="currentColor"

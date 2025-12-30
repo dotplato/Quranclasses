@@ -1,60 +1,82 @@
 "use client";
 
+import { useState } from "react";
+
 export default function StatsCards() {
+  const [activeCard, setActiveCard] = useState<number | null>(null);
+
+  const cards = [
+    {
+      number: "10+",
+      title: "Years",
+      description: "We Teach Quran Online for 10+ Years Worldwide.",
+    },
+    {
+      number: "650+",
+      title: "Students",
+      description: "In our Quran Academy we have 650+ satisfied students.",
+    },
+    {
+      number: "60+",
+      title: "Teachers",
+      description:
+        "We have a 60+ team of Qualified Male and Female Quran teachers",
+    },
+  ];
+
   return (
-    <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 py-10">
+    <div className="w-full px-4 sm:px-6 md:px-8 overflow-x-hidden">
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 py-10 max-w-7xl mx-auto">
+        {cards.map((card, index) => (
+          <div
+            key={index}
+            className={`group relative bg-gray-100 rounded-3xl px-8 py-8 w-full max-w-[320px] sm:w-[320px] shadow-md overflow-hidden transition-all duration-500 hover:shadow-xl active:shadow-xl touch-manipulation ${
+              activeCard === index ? "stats-card-active" : ""
+            }`}
+            onTouchStart={() => setActiveCard(index)}
+            onTouchEnd={() => setActiveCard(null)}
+            onMouseDown={() => setActiveCard(index)}
+            onMouseUp={() => setActiveCard(null)}
+            onMouseLeave={() => setActiveCard(null)}
+          >
+            <div
+              className={`absolute inset-0 bg-[#009FC8] stats-card-bg transition-all duration-500 ${
+                activeCard === index ? "w-full" : "w-0 group-hover:w-full"
+              }`}
+            ></div>
 
-      {/* Card 1 */}
-      <div className="group relative bg-gray-100 rounded-3xl px-8 py-8 w-[320px] shadow-md overflow-hidden transition-all duration-500 hover:shadow-xl">
-        <div className="absolute inset-0 bg-[#5ad9ff] w-0 group-hover:w-full transition-all duration-500"></div>
-
-        <div className="relative z-10">
-          <h2 className="text-4xl font-bold text-teal-600 group-hover:text-white transition-colors">
-            10+
-          </h2>
-          <h3 className="text-2xl font-semibold mt-1 group-hover:text-white transition-colors">
-            Years
-          </h3>
-          <p className="mt-2 text-gray-700 group-hover:text-white transition-colors">
-            We Teach Quran Online for 10+ Years Worldwide.
-          </p>
-        </div>
+            <div className="relative z-10">
+              <h2
+                className={`text-4xl font-bold stats-card-text transition-colors ${
+                  activeCard === index
+                    ? "text-white"
+                    : "text-[#0D5F2B] group-hover:text-white"
+                }`}
+              >
+                {card.number}
+              </h2>
+              <h3
+                className={`text-2xl font-semibold mt-1 stats-card-text transition-colors ${
+                  activeCard === index
+                    ? "text-white"
+                    : "text-[#0D5F2B] group-hover:text-white"
+                }`}
+              >
+                {card.title}
+              </h3>
+              <p
+                className={`mt-2 stats-card-text transition-colors ${
+                  activeCard === index
+                    ? "text-white"
+                    : "text-gray-700 group-hover:text-white"
+                }`}
+              >
+                {card.description}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
-
-      {/* Card 2 */}
-      <div className="group relative bg-gray-100 rounded-3xl px-8 py-8 w-[320px] shadow-md overflow-hidden transition-all duration-500 hover:shadow-xl">
-        <div className="absolute inset-0 bg-[#5ad9ff] w-0 group-hover:w-full transition-all duration-500"></div>
-
-        <div className="relative z-10">
-          <h2 className="text-4xl font-bold text-teal-600 group-hover:text-white transition-colors">
-            650+
-          </h2>
-          <h3 className="text-2xl font-semibold mt-1 group-hover:text-white transition-colors">
-            Students
-          </h3>
-          <p className="mt-2 text-gray-700 group-hover:text-white transition-colors">
-            In our Quran Academy we have 650+ satisfied students.
-          </p>
-        </div>
-      </div>
-
-      {/* Card 3 */}
-      <div className="group relative bg-gray-100 rounded-3xl px-8 py-8 w-[320px] shadow-md overflow-hidden transition-all duration-500 hover:shadow-xl">
-        <div className="absolute inset-0 bg-[#5ad9ff] w-0 group-hover:w-full transition-all duration-500"></div>
-
-        <div className="relative z-10">
-          <h2 className="text-4xl font-bold text-teal-600 group-hover:text-white transition-colors">
-            60+
-          </h2>
-          <h3 className="text-2xl font-semibold mt-1 group-hover:text-white transition-colors">
-            Teachers
-          </h3>
-          <p className="mt-2 text-gray-700 group-hover:text-white transition-colors">
-            We have a 60+ team of Qualified Male and Female Quran teachers
-          </p>
-        </div>
-      </div>
-
     </div>
   );
 }

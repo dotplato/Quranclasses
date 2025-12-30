@@ -71,13 +71,13 @@ export function QualityStandards() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-slate-800 to-slate-900">
+    <section className="py-20 px-6 bg-[#0b3654]">
       <div className="container mx-auto max-w-7xl">
         {/* Headings */}
         <div className="text-center mb-12">
           {/* Yellow Badge */}
           <div className="inline-block mb-4">
-            <span className="bg-gradient-to-r from-[#ffc90d] to-[#ff9d00] text-black px-4 py-2 rounded-md font-semibold text-sm">
+            <span className="inline-block bg-yellow-400 px-4 py-1 rounded-md text-black font-semibold text-sm">
               OUR QUALITY STANDARDS
             </span>
           </div>
@@ -100,8 +100,8 @@ export function QualityStandards() {
                 <div className="flex items-start gap-4">
                   {/* Icon on Left */}
                   <div className="shrink-0">
-                    <div className="w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center">
-                      <IconComponent className="w-6 h-6 text-gray-800" />
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4DD4F0] to-[#009FC8] flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
                   </div>
 
@@ -123,4 +123,3 @@ export function QualityStandards() {
     </section>
   );
 }
-

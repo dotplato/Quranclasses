@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import Image from "next/image"
-import Autoplay from "embla-carousel-autoplay"  
+import * as React from "react";
+import Image from "next/image";
+import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 
 export default function CategoriesSection() {
   const plugin = React.useRef(
     Autoplay({ delay: 3000, stopOnInteraction: false })
-  )
+  );
 
   const reviews = [
     {
@@ -45,18 +45,18 @@ export default function CategoriesSection() {
       review:
         "Highly recommended Quran academy with professional teachers and friendly environment.",
     },
-  ]
+  ];
 
   return (
     <section className="py-16 bg-[#F5F7F6]">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
           Parents/Students Reviews
         </h2>
         <p className="text-gray-600 mt-2">
-          What our students and parents say about our
-          online Quran classes and Teachers
+          What our students and parents say about our online Quran classes and
+          Teachers
         </p>
       </div>
 
@@ -86,6 +86,10 @@ export default function CategoriesSection() {
                     hover:bg-gradient-to-br
                     hover:from-sky-200
                     hover:to-sky-500
+                    active:shadow-xl
+                    active:bg-gradient-to-br
+                    active:from-sky-200
+                    active:to-sky-500
                     group
                   "
                 >
@@ -129,5 +133,5 @@ export default function CategoriesSection() {
         </Carousel>
       </div>
     </section>
-  )
+  );
 }

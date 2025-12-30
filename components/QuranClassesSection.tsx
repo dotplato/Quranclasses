@@ -61,7 +61,7 @@ export default function QuranClassesSection() {
               initial="hidden"
               animate="visible"
               variants={cardVariants}
-              className="bg-white rounded-xl shadow-md border border-transparent hover:border-yellow-400 transition duration-300"
+              className="bg-white rounded-xl shadow-md border border-transparent hover:border-yellow-400 active:border-yellow-400 transition duration-300"
             >
               <div className="p-6 flex items-center justify-between gap-4">
                 <h3 className="text-xl font-semibold text-left">
@@ -89,7 +89,7 @@ export default function QuranClassesSection() {
         </div>
 
         {/* CTA Button */}
-        <button className="mt-10 bg-blue-900 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition">
+        <button className="mt-10 gradient-gold cursor-pointer text-white px-8 py-3 rounded-md hover:bg-blue-700 transition">
           Avail 50% Off Today
         </button>
       </div>

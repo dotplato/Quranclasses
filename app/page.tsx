@@ -36,7 +36,7 @@ import FeaturedCourses from "@/components/FeaturedCourses";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-x-hidden w-full">
       <section className="relative text-white pt-40 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         {/* Background Image */}
         <div
@@ -50,11 +50,11 @@ export default function Home() {
         {/* Glow Effects (optional, kept from your UI theme) */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-64 h-64 bg-[#ffc90d] rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#1ab69d] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-96 h-96 bg-[#009FC8] rounded-full blur-3xl"></div>
         </div>
 
         {/* HERO CONTENT */}
-        <div className="container mx-auto px-20 md:px-24 text-left relative z-10 mt-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-20 lg:px-24 text-left relative z-10 mt-10">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Complete System of Qur’an <br /> Memorization & Modern Education
           </h1>
@@ -64,13 +64,13 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-start">
-            <Button className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black font-semibold text-lg shadow-lg">
-              Start Free Trial
+            <Button className="gradient-gold cursor-pointer text-white font-semibold text-lg shadow-lg">
+              Get Started
             </Button>
 
             <Button
               variant="outline"
-              className="bg-white/10 text-white border border-white/30 hover:bg-white/20 backdrop-blur-sm"
+              className="bg-white/10 text-white cursor-pointer border-2 border-gray-300 hover:bg-white hover:border-[#009FC8] backdrop-blur-sm"
             >
               View Courses
             </Button>
@@ -78,17 +78,17 @@ export default function Home() {
 
           <div className="mt-12 flex flex-wrap justify-start gap-6 sm:gap-8 text-xs sm:text-sm">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ffc90d]" />
+              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#009FC8]" />
               <span>1000+ Students</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ffc90d]" />
+              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#009FC8]" />
               <span>Expert Teachers</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#ffc90d]" />
+              <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-[#009FC8]" />
               <span>Flexible Timing</span>
             </div>
           </div>
@@ -103,8 +103,6 @@ export default function Home() {
       <CategoriesSection />
       <FeaturedCourses />
       <WhyLearnQuran />
-
-      
     </div>
   );
 }
